@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+body{
+    background-color: #f7ecde;
+}
+hr{
+    border-top: black dashed 3px;
+}
+h1{
+    font-size: 50px;
+    font-family: 'Pacifico', cursive;
+    position: relative;
+    display: inline-block;
+    background-color: transparent;
+}
+h1::after{
+    position: absolute;
+    content: " ";
+    background-color: rgb(255, 191, 0);
+    width: 100%;
+    height: 50%;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    transition: all 0.5s;
+}
+h1:hover:after{
+height: 75%;
+}
+::selection{
+    background-color: #fd7e;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+h4{
+    background: linear-gradient(to right,green,rgb(1, 210, 50),rgb(200, 0, 0));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 25px;
+    font-family: 'Righteous', cursive;
+
+}
+.error{
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.508);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+}
+.circle{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
+.icons i{
+    cursor: pointer;
+    transition: all 0.3s;
+}
+.icons i:hover{
+    color: rgba(0, 0, 0, 0.791);
+    transform: scale(1.2);
+}
+.fa-circle-right{
+    color: #bb4120;
+}
+.invalid{
+    border: 1px red solid;
+    transition: box-shadow .15s ease-in-out;
+    background-image: url(../img/wrong.png);
+    background-size: 20px;
+    background-repeat: no-repeat;
+    background-position: 99%;
+    background-blend-mode: hard-light;
+}
+.invalid:focus{
+    box-shadow:  0 0 0 0.25rem rgba(255, 0, 0, 0.255) !important;
+    border: 1px red solid;
+}
+.valid:focus{
+    box-shadow:  0 0 0 0.25rem rgba(0, 255, 26, 0.25) !important;
+    border: 1px rgb(85, 255, 0) solid ;
+}
+.valid{
+    border: 1px rgb(85, 255, 0) solid ;
+    transition: box-shadow .15s ease-in-out;
+    background-image: url(../img/correct.jpg);
+    background-size: 25px;
+    background-repeat: no-repeat;
+    background-position: 99%;
+    background-blend-mode: hard-light;
+
+}
+.form-control:focus{
+    box-shadow:  0 0 0 0.25rem #fec160b8;
+    border: 1px rgba(255, 191, 0, 0.933) solid ;
+}
