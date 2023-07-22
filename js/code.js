@@ -40,7 +40,7 @@ function DisplayData() {
     }
     document.getElementById("row").innerHTML = container;
 }
-function validateInputOnSubmission() {
+function validateInputOnSubmit() {
     if (nameFlag && urlFlag) {
         display()
         nameFlag=false;
